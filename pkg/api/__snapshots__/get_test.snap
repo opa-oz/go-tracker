@@ -1,0 +1,12 @@
+
+[TestGetRoute/if_keys_is_not_set,_get_returns_0 - 1]
+{"value":0}
+---
+
+[TestGetRoute/if_key_is_set,_get_returns_value - 1]
+{"value":100}
+---
+
+[TestGetRoute/if_max_is_set,_get_returns_less_or_equal - 1]
+{"value":50}
+---

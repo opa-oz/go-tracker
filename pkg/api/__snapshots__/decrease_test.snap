@@ -1,0 +1,16 @@
+
+[TestDecreaseRoute/if_keys_is_not_set,_decrease_returns_0 - 1]
+{"previous":0,"value":0}
+---
+
+[TestDecreaseRoute/if_keys_is_not_set,_decrease_returns_0 - 2]
+{"previous":2,"value":1}
+---
+
+[TestDecreaseRoute/if_key_is_set,_get_returns_value - 1]
+{"previous":100,"value":92}
+---
+
+[TestDecreaseRoute/if_min_is_set,_get_returns_less_or_equal - 1]
+{"previous":100,"value":50}
+---

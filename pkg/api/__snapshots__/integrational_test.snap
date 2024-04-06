@@ -1,0 +1,32 @@
+
+[TestAllEndpoints/get_->_0 - 1]
+{"value":0}
+---
+
+[TestAllEndpoints/increase?step=100_->_100 - 1]
+{"previous":0,"value":100}
+---
+
+[TestAllEndpoints/get_->_100 - 1]
+{"value":100}
+---
+
+[TestAllEndpoints/decrease?step=10_->_90 - 1]
+{"previous":100,"value":90}
+---
+
+[TestAllEndpoints/increase?step=100&max=160_->_160 - 1]
+{"previous":90,"value":160}
+---
+
+[TestAllEndpoints/reset_->_0 - 1]
+{"value":0}
+---
+
+[TestAllEndpoints/increase?step=10_->_10 - 1]
+{"previous":0,"value":10}
+---
+
+[TestAllEndpoints/decrease?step=100_->_0 - 1]
+{"previous":10,"value":0}
+---

@@ -1,0 +1,12 @@
+
+[TestResetRoute/if_keys_is_not_set,_reset_to_0 - 1]
+{"value":0}
+---
+
+[TestResetRoute/if_key_is_set,_reset_to_0 - 1]
+{"value":0}
+---
+
+[TestResetRoute/if_init_is_set,_reset_to_init_value - 1]
+{"value":50}
+---

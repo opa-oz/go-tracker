@@ -1,0 +1,299 @@
+definitions:
+  api.Healz.response:
+    properties:
+      message:
+        example: OK
+        type: string
+    type: object
+  api.Ready.response:
+    properties:
+      message:
+        example: Ready
+        type: string
+    type: object
+  utils.Unisponse.response:
+    properties:
+      value:
+        type: integer
+    type: object
+  utils.UnisponseBA.response:
+    properties:
+      previous:
+        type: integer
+      value:
+        type: integer
+    type: object
+info:
+  contact: {}
+paths:
+  /d/{name}:
+    get:
+      consumes:
+      - application/json
+      description: Decrease current index of `name`
+      parameters:
+      - description: Name
+        in: path
+        name: name
+        required: true
+        type: string
+      - default: 0
+        description: Min
+        in: query
+        name: min
+        required: true
+        type: integer
+      - default: 1
+        description: Step
+        in: query
+        name: step
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/utils.UnisponseBA.response'
+      summary: decrease by name
+      tags:
+      - api
+  /decrease/{name}:
+    get:
+      consumes:
+      - application/json
+      description: Decrease current index of `name`
+      parameters:
+      - description: Name
+        in: path
+        name: name
+        required: true
+        type: string
+      - default: 0
+        description: Min
+        in: query
+        name: min
+        required: true
+        type: integer
+      - default: 1
+        description: Step
+        in: query
+        name: step
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/utils.UnisponseBA.response'
+      summary: decrease by name
+      tags:
+      - api
+  /g/{name}:
+    get:
+      consumes:
+      - application/json
+      description: Get current index of `name`
+      parameters:
+      - description: Name
+        in: path
+        name: name
+        required: true
+        type: string
+      - default: 0
+        description: Max
+        in: query
+        name: max
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/utils.Unisponse.response'
+      summary: get by name
+      tags:
+      - api
+  /get/{name}:
+    get:
+      consumes:
+      - application/json
+      description: Get current index of `name`
+      parameters:
+      - description: Name
+        in: path
+        name: name
+        required: true
+        type: string
+      - default: 0
+        description: Max
+        in: query
+        name: max
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/utils.Unisponse.response'
+      summary: get by name
+      tags:
+      - api
+  /healz:
+    get:
+      consumes:
+      - application/json
+      description: Check health endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.Healz.response'
+      summary: healz
+      tags:
+      - utils
+  /i/{name}:
+    get:
+      consumes:
+      - application/json
+      description: Increase current index of `name`
+      parameters:
+      - description: Name
+        in: path
+        name: name
+        required: true
+        type: string
+      - default: 0
+        description: Max
+        in: query
+        name: max
+        required: true
+        type: integer
+      - default: 1
+        description: Step
+        in: query
+        name: step
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/utils.UnisponseBA.response'
+      summary: increase by name
+      tags:
+      - api
+  /increase/{name}:
+    get:
+      consumes:
+      - application/json
+      description: Increase current index of `name`
+      parameters:
+      - description: Name
+        in: path
+        name: name
+        required: true
+        type: string
+      - default: 0
+        description: Max
+        in: query
+        name: max
+        required: true
+        type: integer
+      - default: 1
+        description: Step
+        in: query
+        name: step
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/utils.UnisponseBA.response'
+      summary: increase by name
+      tags:
+      - api
+  /r/{name}:
+    get:
+      consumes:
+      - application/json
+      description: Reset current index of `name`
+      parameters:
+      - description: Name
+        in: path
+        name: name
+        required: true
+        type: string
+      - default: 0
+        description: Init
+        in: query
+        name: init
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/utils.Unisponse.response'
+      summary: reset by name
+      tags:
+      - api
+  /ready:
+    get:
+      consumes:
+      - application/json
+      description: Check readiness
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.Ready.response'
+      summary: ready
+      tags:
+      - utils
+  /reset/{name}:
+    get:
+      consumes:
+      - application/json
+      description: Reset current index of `name`
+      parameters:
+      - description: Name
+        in: path
+        name: name
+        required: true
+        type: string
+      - default: 0
+        description: Init
+        in: query
+        name: init
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/utils.Unisponse.response'
+      summary: reset by name
+      tags:
+      - api
+swagger: "2.0"
